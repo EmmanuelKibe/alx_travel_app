@@ -1,3 +1,11 @@
-#listings app URL Configuration
-from django.urls import path
-from . import views
+# listings/urls.py
+from rest_framework import routers
+from django.urls import path, include
+from .views import ListingViewSet
+
+router = routers.DefaultRouter()
+router.register(r'listings', ListingViewSet)
+
+urlpatterns = [
+    path('', include(router.urls)),
+]
