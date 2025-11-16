@@ -15,9 +15,7 @@ import os
 import environ
 
 # Initialize environment variables
-env = environ.Env(
-    DEBUG=(bool, False)
-)
+env = environ.Env()
 
 environ.Env.read_env()
 
